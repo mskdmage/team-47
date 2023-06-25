@@ -1,80 +1,318 @@
-<!-- This is the main page of the theme park website -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- Page title -->
-    <title>Theme Park - Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area 47 - Home</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Site Header -->
-    <header>
-        <h1><a href="index.html">Theme park logo TBA - Adventure and Fun Await!</a></h1>
 
-        <!-- Navigation -->
-        <nav>
-            <a href="your_visit.html">Buy your ticket now!</a> |
-            <a href="#agenda">Agenda/Upcoming Events</a> |
-            <a href="your_visit.html">Plan your visit</a> |
-            <a href="about_us.html">About us</a>
+    <!-- SITE HEADER - Contains Logo and Navigation Links -->
+    <header class="header">
+        <!-- NAVBAR - Left navbar only shown on desktop, Right navbar will transform into menu -->
+        <nav class="navbar">
+            <!-- LOGO - Displayed in the middle of the Navbar -->
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/logo-black.svg" alt="Area 47 Logo" />
+            </a>
+            <!-- NAVBAR INFO - Park Hours info -->
+            <div class="navbar__info">Today's hours: <b>09:00 - 23:00</b></div>
+            <!-- NAVBAR LEFT - Links will hide on Mobile -->
+            <ul class="navbar__options navbar__left">
+                <!-- NAVBAR LEFT - Add items here -->
+                <li>
+                    <a class="button-red" href="your_visit.html">Get your tickets!</a>
+                </li>
+                <li>
+                    <a href="your_visit.html">Plan your visit!</a>
+                </li>
+            </ul>
+            <!-- HAMBURGER MENU - Hidden on Desktop -->
+            <input type="checkbox" id="navbar-check" class="navbar__check">
+            <label for="navbar-check" class="navbar__label">
+                <img src="assets/menu.svg" alt="Menu" />
+            </label>
+            <!-- NAVBAR RIGHT - Links will appear on hamburger list menu on Mobile -->
+            <ul class="navbar__options navbar__right">
+                <!-- NAVBAR RIGHT - Add items here -->
+                <li>
+                    <a href="your_visit.html">The Park</a>
+                </li>
+                <li>
+                    <a href="your_visit.html">Upcoming Events</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+            </ul>
         </nav>
     </header>
+    <!-- ##### START OF MAIN CONTENT ##### -->
     
-    <!-- Main Content -->
-    <main>
-        <section id="agenda">
-            <h2>Agenda/Upcoming Events</h2>
-            <!-- Each box would be represented with a div or figure tag -->
-            <!-- Event image and details -->
-            <!-- Replace with actual image path -->
-            <div><img src="path_to_event_image.jpg" alt="Event Image"><p>Our first event, 'Summer Fun Fest', kicks off on June 1st. Don't miss out on the fun!</p></div>
-            <!-- More events -->
+    <main role="main">
+        <!-- Banner Section -->
+        <section id="banner">
+            <div class="flex__container">
+                <div class="banner bg-diagonal">
+                    <div class="banner__content bordered">
+                        <img src="images/1.jpg" />
+                        <p class="banner__tagline">
+                            Our first event, <strong>'Summer Fun Fest'</strong>, kicks off on June 1st. Don't miss out on the fun!
+                        </p>
+                    </div>
+                </div>
+            </div>        
+        </section>
+        <!-- Promotions Section -->
+        <section id="special-offers" class="bg-dots">
+            <div class="information bordered bg-lightest">
+                <h3>Once in a lifetime opportunity</h3>
+                <h1>Check out our summer deals!</h1>
+            </div>
+            <a class="button-red">Buy tickets</a>
+            <div class="grid__container three-cols">
+                <div class="card bg-lightest bordered">
+                    <div class="card-type-one">
+                        <h1 class="card__title">Premium</h1>
+                        <h2 class="card__subtitle">Daily Pass</h2>
+                        <p class="card__description">Includes access to all rides once per day.</p>
+                        <p class="card__price">
+                            <strong>$49.99</strong> x Adult <br>
+                            <strong>$29.99 </strong>x Child
+                        </p>
+                        <div class="card__image">
+                            <img src="assets/ticket-astronaut.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-lightest bordered">
+                    <div class="card-type-one">
+                        <h1 class="card__title">Family Pass</h1>
+                        <h2 class="card__subtitle">Daily Bundle</h2>
+                        <p class="card__description">Includes access to all rides once per day.</p>
+                        <p class="card__price">
+                            Starting from <strong>$59.99</strong>
+                        </p>
+                        <div class="card__image">
+                            <img src="assets/ticket-rocket.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-green bordered">
+                    <div class="card-type-one">
+                        <h1 class="card__title">Membership</h1>
+                        <h2 class="card__subtitle">Seasonal Pass</h2>
+                        <p class="card__description">Become a member and enjoy exclusive benefits like priority access, unlimited rides, merch discounts and more.</p>
+                        <p class="card__price">
+                            <strong>$159.99</strong>
+                        </p>
+                        <div class="card__image">
+                            <img src="assets/ticket-planet.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Rides Section -->
+        <section id="rides" class="bg-mixed">
+            <div class="information">
+                <h1>Out of this world experiences</h1>
+                <h2>Featured rides</h2>
+                <a class="button-red">All rides!</a>
+            </div>
+            <div class="grid__container four-cols">
+                
+                <div class="card bordered bg-lightest">
+                    <div class="card-type-two">
+                        <h1 class="card__title">Take-off</h1>
+                        <p class="card__description">Experience the exhilarating journey of a rocket launch as our mechanical attraction propels you into the vastness of space.</p>
+                        <div class="card__image">
+                            <img class="bordered" src="images/20.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bordered bg-lightest">
+                    <div class="card-type-two">
+                        <h1 class="card__title">UFO Discombobulator</h1>
+                        <p class="card__description">Get ready for a wild, stomach-churning ride, where twists, turns, and spins will put your stomach to the ultimate test!</p>
+                        <div class="card__image">
+                            <img class="bordered" src="images/1.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bordered bg-lightest">
+                    <div class="card-type-two">
+                        <h1 class="card__title">Alien Invasion Escape Room</h1>
+                        <p class="card__description">Gear up, collaborate with your team, and outsmart extraterrestrial invaders in an adrenaline-pumping Alien Invasion.</p>
+                        <div class="card__image">
+                            <img class="bordered" src="images/5.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bordered bg-lightest">
+                    <div class="card-type-two">
+                        <h1 class="card__title">VR Adventures</h1>
+                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
+                        <div class="card__image">
+                            <img class="bordered" src="images/13.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <section id="tickets">
-            <h2>Ticket Prices, Membership, and Special Offers</h2>
-            <div>
-                <h3>Ticket Prices</h3>
-                <p>Adults: £50, Children: £30. Family package available at a discounted rate.</p>
+        <section id="park-hours-and-location" class="bg-primary">
+            <div class="information bordered bg-blue">
+                <h1>Location</h1>
+                <h2>Find us at Las Vegas, Nevada</h2>
+                <h4>8101 W Mountains Edge Pkwy, Las Vegas, NV 89178, US</h4>
             </div>
-            <div>
-                <h3>Membership</h3>
-                <p>Become a member and enjoy exclusive benefits like priority access, discounts and more.</p>
-            </div>
-            <div>
-                <h3>Special Offers</h3>
-                <p>Check out our summer special: buy two tickets and get the third one free!</p>
+            <div class="grid__container two-cols">
+                <figure>
+                    <iframe  class="bordered" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2033.2994493219244!2d-115.26764380509697!3d36.004127821631805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1687545298673!5m2!1ses-419!2sec"></iframe>
+                </figure>
+                <div class="information">
+                    <h1>Park Hours</h1>
+                    <table class="bordered bg-lightest">
+                        <tr>
+                            <th>Day</th> <th>Opens</th> <th>Closes</th>
+                        </tr>
+                        <tr>
+                            <td>Monday</td> <td>09:00</td> <td>21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td> <td>09:00</td> <td>21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td> <td>10:00</td> <td>18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td> <td>10:00</td> <td>18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td> <td>10:00</td> <td>22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td> <td>10:00</td> <td>22:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td> <td>10:00</td> <td>22:00</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="park-info">
-            <h2>Map, Opening Hours, and Food Options</h2>
-            <div>
-                <h3>Map</h3>
-                <!-- Replace with actual image path -->
-                <img src="path_to_map_image.jpg" alt="Park Map">
+        <section id="food">
+            <div class="information">
+                <h1>Looking for somewhere to stay?</h1>
             </div>
-            <div>
-                <h3>Opening Hours</h3>
+            <div class="flex__container">
+                <div class="card">
+                    <div class="card-type-three">
+                        <h1 class="card__title">VR Adventures</h1>
+                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
+                        <div class="card__image">
+                            <img src="images/16.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-type-three">
+                        <h1 class="card__title">VR Adventures</h1>
+                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
+                        <div class="card__image">
+                            <img src="images/16.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="food-and-accomodation">
+                <div class="information">
+                    <h1>Looking for somewhere to stay?</h1>
+                </div>
+                <div class="flex__container">
+                    <div class="card">
+                        <div class="card-type-four">
+                            <h1 class="card__title">VR Adventures</h1>
+                            <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
+                            <div class="card__image">
+                                <img src="images/16.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-type-four">
+                            <h1 class="card__title">VR Adventures</h1>
+                            <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
+                            <div class="card__image">
+                                <img src="images/16.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+    </main>
+
+    <!-- ##### END OF MAIN CONTENT ##### -->
+    <!-- SITE FOOTER - Contains supporting links -->
+    <footer class="footer">
+        <div class="footer__content">
+            <!-- FOOTER MENU - Add more menus using an h1 for a title and a list of links -->
+            <div class="footer__content-menu">
+                <h1>Plans</h1>
                 <ul>
-                    <li>Monday: 9am - 9pm</li>
-                    <li>Tuesday: 9am - 9pm</li>
-                    <!-- Rest of the days -->
+                    <li>
+                        <a href="your_visit.html">Tickets</a>
+                    </li>
+                    <li>
+                        <a href="your_visit.html">Memberships</a>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <h3>Restaurants/Food</h3>
-                <p>Explore our variety of food options, from fast food to fine dining. Vegan and gluten-free options available.</p>
+            <div class="footer__content-menu">
+                <h1>Support</h1>
+                <ul>
+                    <li>
+                        <a href="about_us.html">Copyright information</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">Help</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </main>
-    
-    <!-- Footer -->
-    <footer>
-        <a href="about_us.html#privacy">Privacy Policy</a> |
-        <a href="about_us.html#copyright">Copyright Information</a> |
-        <a href="about_us.html#contact">Contact Us</a>
+            <div class="footer__content-menu">
+                <h1>Company</h1>
+                <ul>
+                    <li>
+                        <a href="about_us.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">Careers</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- FOOTER CREDITS -->
+        <div class="footer__credits">
+            Created by Team 47 - WebDev 2023 @UoL. All credits to Francois Sergenton, Danniels Villarroel, Lucas Pedrosa and Alberto Briceno.
+        </div>
     </footer>
+    
 </body>
 </html>
-
