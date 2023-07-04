@@ -8,311 +8,206 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-    <!-- SITE HEADER - Contains Logo and Navigation Links -->
-    <header class="header">
-        <!-- NAVBAR - Left navbar only shown on desktop, Right navbar will transform into menu -->
-        <nav class="navbar">
-            <!-- LOGO - Displayed in the middle of the Navbar -->
-            <a href="index.html" class="navbar__logo">
-                <img src="assets/logo-black.svg" alt="Area 47 Logo" />
-            </a>
-            <!-- NAVBAR INFO - Park Hours info -->
-            <div class="navbar__info">Today's hours: <b>09:00 - 23:00</b></div>
-            <!-- NAVBAR LEFT - Links will hide on Mobile -->
-            <ul class="navbar__options navbar__left">
-                <!-- NAVBAR LEFT - Add items here -->
-                <li>
-                    <a class="button-red" href="your_visit.html">Get your tickets!</a>
-                </li>
-                <li>
-                    <a href="your_visit.html">Plan your visit!</a>
-                </li>
+    <!-- HEADER: Contains site navigation and logo -->
+    <header>
+        <!-- NAVBAR: contains navigation for the page and company logo. Items for this section will be treated as LOGO, INFO, LEFT MENU, RIGHT MENU. -->
+        <nav>
+            <a href="index.html"><img src="assets/icons/logo.svg" alt="area 47 logo"></a>
+            <p>Today's hours: <b>09:00 - 23:00</b></p>
+            <ul>
+                <li><a href="your_visit.html#tickets">Get your tickets!</a></li>
+                <li><a href="your_visit.html">Plan your visit!</a></li>
             </ul>
-            <!-- HAMBURGER MENU - Hidden on Desktop -->
-            <input type="checkbox" id="navbar-check" class="navbar__check">
-            <label for="navbar-check" class="navbar__label">
-                <img src="assets/menu.svg" alt="Menu" />
-            </label>
-            <!-- NAVBAR RIGHT - Links will appear on hamburger list menu on Mobile -->
-            <ul class="navbar__options navbar__right">
-                <!-- NAVBAR RIGHT - Add items here -->
-                <li>
-                    <a href="your_visit.html">The Park</a>
-                </li>
-                <li>
-                    <a href="your_visit.html">Upcoming Events</a>
-                </li>
-                <li>
-                    <a href="about_us.html">About Us</a>
-                </li>
+            <ul>
+                <li><a href="about_us.html#about">The Park</a></li>
+                <li><a href="your_visit.html#events">Upcoming Events</a></li>
+                <li><a href="about_us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
-    <!-- ##### START OF MAIN CONTENT ##### -->
-    
+    <!-- MAIN: Contains the main content for the document. All sections must specify an #id.  -->
     <main role="main">
-        <!-- Banner Section -->
+        <!-- BANNER SECTION: Contains banner image and caption. -->
         <section id="banner">
-            <div class="flex__container">
-                <div class="banner bg-diagonal">
-                    <div class="banner__content bordered">
-                        <img src="images/1.jpg" />
-                        <p class="banner__tagline">
-                            Our first event, <strong>'Summer Fun Fest'</strong>, kicks off on June 1st. Don't miss out on the fun!
-                        </p>
-                    </div>
-                </div>
-            </div>        
+            <div>
+                <img src="images/banner_img.jpg" alt="flying saucer park attraction in area 47">
+                <p>Our first event, <strong>'Summer Fun Fest'</strong>, kicks off on June 1st. Don't miss out on the fun!</p>
+            </div>
         </section>
-        <!-- Promotions Section -->
-        <section id="special-offers" class="bg-dots">
-            <div class="information bordered bg-lightest">
-                <h3>Once in a lifetime opportunity</h3>
+        <!-- DEALS SECTION: Contains information about deals. Items for this section will be treated as CARDS.-->
+        <section id="deals">
+            <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
+            <div>
+                <h2>Once in a lifetime opportunity</h2>
                 <h1>Check out our summer deals!</h1>
             </div>
-            <a class="button-red">Buy tickets</a>
-            <div class="grid__container three-cols">
-                <div class="card bg-lightest bordered">
-                    <div class="card-type-one">
-                        <h1 class="card__title">Premium</h1>
-                        <h2 class="card__subtitle">Daily Pass</h2>
-                        <p class="card__description">Includes access to all rides once per day.</p>
-                        <p class="card__price">
-                            <strong>$49.99</strong> x Adult <br>
-                            <strong>$29.99 </strong>x Child
-                        </p>
-                        <div class="card__image">
-                            <img src="assets/ticket-astronaut.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-lightest bordered">
-                    <div class="card-type-one">
-                        <h1 class="card__title">Family Pass</h1>
-                        <h2 class="card__subtitle">Daily Bundle</h2>
-                        <p class="card__description">Includes access to all rides once per day.</p>
-                        <p class="card__price">
-                            Starting from <strong>$59.99</strong>
-                        </p>
-                        <div class="card__image">
-                            <img src="assets/ticket-rocket.svg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-green bordered">
-                    <div class="card-type-one">
-                        <h1 class="card__title">Membership</h1>
-                        <h2 class="card__subtitle">Seasonal Pass</h2>
-                        <p class="card__description">Become a member and enjoy exclusive benefits like priority access, unlimited rides, merch discounts and more.</p>
-                        <p class="card__price">
-                            <strong>$159.99</strong>
-                        </p>
-                        <div class="card__image">
-                            <img src="assets/ticket-planet.svg" />
-                        </div>
-                    </div>
-                </div>
+            <!-- CARD: Specifies a heading, subheading, image, description and a price.  -->
+            <div>
+                <h1>Premium</h1>
+                <h2>Daily Pass</h2>
+                <img src="assets/icons/astronaut.svg" alt="astronaut icon">
+                <p>Includes access to all rides once per day.</p>
+                <p><strong>$49.99</strong> x Adult<br><strong>$29.99</strong> x Child</p>
+            </div>
+            <!-- CARD: Specifies a heading, subheading, image, description and a price.  -->
+            <div>
+                <h1>Family Pass</h1>
+                <h2>Daily Pass Bundle</h2>
+                <img src="assets/icons/spaceship.svg" alt="spaceship icon">
+                <p>Includes access to all rides once per day.</p>
+                <p>Starting from <strong>$59.99</strong></p>
+            </div>
+            <!-- CARD: Specifies a heading, subheading, image, description and a price.  -->
+            <div>
+                <h1>Membership</h1>
+                <h2>Seasonal Pass</h2>
+                <img src="assets/icons/planet.svg" alt="planet icon">
+                <p>Become a member and enjoy exclusive benefits like priority access, unlimited rides, merch discounts and more.</p>
+                <p><strong>$159.99</strong></p>
             </div>
         </section>
-        <!-- Featured Rides Section -->
-        <section id="rides" class="bg-mixed">
-            <div class="information">
+        <!-- FEATURED SECTION: Contains information about featured rides. Items for this section will be treated as RIDES. -->
+        <section id="featured">
+            <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
+            <div>
                 <h1>Out of this world experiences</h1>
                 <h2>Featured rides</h2>
-                <a class="button-red">All rides!</a>
             </div>
-            <div class="grid__container four-cols">
-                
-                <div class="card bordered bg-lightest">
-                    <div class="card-type-two">
-                        <h1 class="card__title">Take-off</h1>
-                        <p class="card__description">Experience the exhilarating journey of a rocket launch as our mechanical attraction propels you into the vastness of space.</p>
-                        <div class="card__image">
-                            <img class="bordered" src="images/20.jpg" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card bordered bg-lightest">
-                    <div class="card-type-two">
-                        <h1 class="card__title">UFO Discombobulator</h1>
-                        <p class="card__description">Get ready for a wild, stomach-churning ride, where twists, turns, and spins will put your stomach to the ultimate test!</p>
-                        <div class="card__image">
-                            <img class="bordered" src="images/1.jpg" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card bordered bg-lightest">
-                    <div class="card-type-two">
-                        <h1 class="card__title">Alien Invasion Escape Room</h1>
-                        <p class="card__description">Gear up, collaborate with your team, and outsmart extraterrestrial invaders in an adrenaline-pumping Alien Invasion.</p>
-                        <div class="card__image">
-                            <img class="bordered" src="images/5.jpg" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card bordered bg-lightest">
-                    <div class="card-type-two">
-                        <h1 class="card__title">VR Adventures</h1>
-                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
-                        <div class="card__image">
-                            <img class="bordered" src="images/13.jpg" />
-                        </div>
-                    </div>
-                </div>
-
+            <!-- RIDE: Specifies an image, a name and a description. -->
+            <div>
+                <img src="images/ride_01_takeoff.jpg" alt="spaceship park attraction">
+                <h1>Take-Off</h1>
+                <p>Experience the exhilarating journey of a rocket launch as our mechanical attraction propels you into the vastness of space.</p>
+            </div>
+            <!-- RIDE: Specifies an image, a name and a description. -->
+            <div>
+                <img src="images/ride_02_ufo.jpg" alt="flying saucer park attraction">
+                <h1>UFO Discombobulator</h1>
+                <p>Get ready for a wild, stomach-churning ride, where twists, turns, and spins will put your stomach to the ultimate test!</p>
+            </div>
+            <!-- RIDE: Specifies an image, a name and a description. -->
+            <div>
+                <img src="images/ride_03_invasion.jpg" alt="neon letters for alien invasion">
+                <h1>Alien Invasion Escape Room</h1>
+                <p>Gear up, collaborate with your team, and outsmart extraterrestrial invaders in an adrenaline-pumping Alien Invasion.</p>
+            </div>
+            <!-- RIDE: Specifies an image, a name and a description. -->
+            <div>
+                <img src="images/ride_04_vr.jpg" alt="people in virtual reality theatre">
+                <h1>VR Adventures</h1>
+                <p>Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
             </div>
         </section>
-
-        <section id="park-hours-and-location" class="bg-primary">
-            <div class="information bordered bg-blue">
+        <!-- LOCATION SECTION: Contains information about how to reach the park and park hours. Items for this section will be treated as MAP(figure), HOURS(table). -->
+        <section id="location">
+            <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
+            <div>
                 <h1>Location</h1>
                 <h2>Find us at Las Vegas, Nevada</h2>
-                <h4>8101 W Mountains Edge Pkwy, Las Vegas, NV 89178, US</h4>
             </div>
-            <div class="grid__container two-cols">
-                <figure>
-                    <iframe  class="bordered" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2033.2994493219244!2d-115.26764380509697!3d36.004127821631805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1687545298673!5m2!1ses-419!2sec"></iframe>
-                </figure>
-                <div class="information">
-                    <h1>Park Hours</h1>
-                    <table class="bordered bg-lightest">
-                        <tr>
-                            <th>Day</th> <th>Opens</th> <th>Closes</th>
-                        </tr>
-                        <tr>
-                            <td>Monday</td> <td>09:00</td> <td>21:00</td>
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td> <td>09:00</td> <td>21:00</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td> <td>10:00</td> <td>18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td> <td>10:00</td> <td>18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Friday</td> <td>10:00</td> <td>22:00</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday</td> <td>10:00</td> <td>22:00</td>
-                        </tr>
-                        <tr>
-                            <td>Sunday</td> <td>10:00</td> <td>22:00</td>
-                        </tr>
-                    </table>
-                </div>
+            <!-- MAP: Specifies an iframe (Google Maps embedded map), and a figcaption. -->
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2033.2994493219244!2d-115.26764380509697!3d36.004127821631805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1687545298673!5m2!1ses-419!2sec"></iframe>
+                <figcaption>8101 W Mountains Edge Pkwy, Las Vegas, NV 89178, US.</figcaption>
+            </figure>
+            <!-- HOURS: Specifies a heading, a table, table headers, table body, rows, and table data for weekdays, open time and close time. -->
+            <div>
+                <h2>Park Hours</h2>
+                <table class="bordered bg-lightest">
+                    <tbody>
+                    <tr>
+                        <th>Day</th> <th>Opens</th> <th>Closes</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td> <td>09:00</td> <td>21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td> <td>09:00</td> <td>21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td> <td>10:00</td> <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td> <td>10:00</td> <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td> <td>10:00</td> <td>22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td> <td>10:00</td> <td>22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td> <td>10:00</td> <td>22:00</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
-
-        <section id="food">
-            <div class="information">
-                <h1>Looking for somewhere to stay?</h1>
+        <!-- PARTNER SECTION: Contains information about food and acommodation. Items for this section will be treated as PARTNERS. -->
+        <section id="partners">
+            <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
+            <div>
+                <h1>Want to take your visit to the next level?</h1>
+                <h2>Check out our fantastic partners food and accommodation!</h2>
             </div>
-            <div class="flex__container">
-                <div class="card">
-                    <div class="card-type-three">
-                        <h1 class="card__title">VR Adventures</h1>
-                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
-                        <div class="card__image">
-                            <img src="images/16.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-type-three">
-                        <h1 class="card__title">VR Adventures</h1>
-                        <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
-                        <div class="card__image">
-                            <img src="images/16.jpg" />
-                        </div>
-                    </div>
-                </div>
+            <!-- PARTNER: Specifies a name, description and image. -->
+            <div>
+                <h1>Cafe 51</h1>
+                <p>Unleash your inner extraterrestrial cravings at our Area 51-inspired diner cafe.</p>
+                <img src="images/partner_01_cafe51.jpg" alt="diner restaurant neon area 51 alien drawing on the wall">
             </div>
-
-            <section id="food-and-accomodation">
-                <div class="information">
-                    <h1>Looking for somewhere to stay?</h1>
-                </div>
-                <div class="flex__container">
-                    <div class="card">
-                        <div class="card-type-four">
-                            <h1 class="card__title">VR Adventures</h1>
-                            <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
-                            <div class="card__image">
-                                <img src="images/16.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-type-four">
-                            <h1 class="card__title">VR Adventures</h1>
-                            <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
-                            <div class="card__image">
-                                <img src="images/16.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- PARTNER: Specifies a name, description and image. -->
+            <div>
+                <h1>Village Pub Mountains Edge</h1>
+                <p>Local chain offering American fare, plus a full-service bar with video gaming.</p>
+                <img src="images/partner_02_village_pub.jpg" alt="people enjoying confortable futuristic dim pub">
+            </div>
+            <!-- PARTNER: Specifies a name, description and image. -->
+            <div>
+                <h1>South Point Hotel Casino & Spa</h1>
+                <p>Experience a thrilling blend of entertainment and relaxation at South Point Hotel Casino & Spa.</p>
+                <img src="images/partner_03_south_point.jpg" alt="beautiful front view of a hotel at night neon lights south point">
+            </div>
+            <!-- PARTNER: Specifies a name, description and image. -->
+            <div>
+                <h1>The Grandview at Las Vegas</h1>
+                <p>The perfect Las Vegas getaway, with a vibrant and inviting atmosphere.</p>
+                <img src="images/partner_04_grandview.jpg" alt="sunny day in pool resort">
+            </div>
         </section>
-
     </main>
-
-    <!-- ##### END OF MAIN CONTENT ##### -->
-    <!-- SITE FOOTER - Contains supporting links -->
-    <footer class="footer">
-        <div class="footer__content">
-            <!-- FOOTER MENU - Add more menus using an h1 for a title and a list of links -->
-            <div class="footer__content-menu">
-                <h1>Plans</h1>
-                <ul>
-                    <li>
-                        <a href="your_visit.html">Tickets</a>
-                    </li>
-                    <li>
-                        <a href="your_visit.html">Memberships</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__content-menu">
-                <h1>Support</h1>
-                <ul>
-                    <li>
-                        <a href="about_us.html">Copyright information</a>
-                    </li>
-                    <li>
-                        <a href="about_us.html">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="about_us.html">Help</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__content-menu">
-                <h1>Company</h1>
-                <ul>
-                    <li>
-                        <a href="about_us.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="about_us.html">Careers</a>
-                    </li>
-                    <li>
-                        <a href="about_us.html">Contact us</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- FOOTER: Contains support links. Links will be arranged inside a MENU. -->
+    <footer>
+        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+        <div>
+            <h1>Plans</h1>
+            <ul>
+                <li><a href="your_visit.html#tickets">Tickets</a></li>
+                <li><a href="your_visit.html#membership">Memberships</a></li>
+            </ul>
         </div>
-        <!-- FOOTER CREDITS -->
-        <div class="footer__credits">
-            Created by Team 47 - WebDev 2023 @UoL. All credits to Francois Sergenton, Danniels Villarroel, Lucas Pedrosa and Alberto Briceno.
+        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+        <div>
+            <h1>Support</h1>
+            <ul>
+                <li><a href="about_us.html#copyright">Copyright information</a></li>
+                <li><a href="about_us.html#privacy">Privacy Policy</a></li>
+                <li><a href="about_us.html#contact">Help</a></li>
+            </ul>
+        </div>
+        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+        <div>
+            <h1>Company</h1>
+            <ul>
+                <li><a href="about_us.html#history">About Us</a></li>
+                <li><a href="about_us.html#careers">Careers</a></li>
+                <li><a href="about_us.html#contact">Contact us</a></li>
+            </ul>
+        </div>
+        <!-- CREDITS: Information about the authors of the website. -->
+        <div>
+            <p>Created by Team 47 - WebDev April 2023 @UoL. All credits to Francois Sergenton, Danniels Villarroel, Lucas Pedrosa and Alberto Briceno.</p>
         </div>
     </footer>
-    
 </body>
 </html>
