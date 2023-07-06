@@ -15,14 +15,14 @@
             <a href="index.html" class="navbar__logo"><img src="assets/icons/logo.svg" alt="area 47 logo"></a>
             <p class="navbar__info">Today's hours: <b>09:00 - 23:00</b></p>
             <ul class="navbar__menu-left">
-                <li><a href="your_visit.html#tickets">Get your tickets!</a></li>
-                <li><a href="your_visit.html">Plan your visit!</a></li>
+                <li><a class="button-red" href="your_visit.html#tickets">Get your tickets!</a></li>
+                <li><a class="button-blue" href="your_visit.html#directions">Plan your visit!</a></li>
             </ul>
-            <!-- HAMBURGER MENU: Workarround to transform navbar when in mobile without JS. -->
+            <!-- HAMBURGER MENU: Workarround to transform navbar when in mobile. -->
             <input type="checkbox" id="navbar-check" class="navbar__check">
-            <label for="navbar-check" class="navbar__label"><img src="assets/hamburger.svg" alt="Menu" /></label>
+            <label for="navbar-check" class="navbar__label"><img src="assets/icons/hamburger.svg" alt="Menu" /></label>
             <ul class="navbar__menu-right">
-                <li><a href="about_us.html#about">The Park</a></li>
+                <li><a href="your_visit.html#rides">The Park</a></li>
                 <li><a href="your_visit.html#events">Upcoming Events</a></li>
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
@@ -44,7 +44,7 @@
         <!-- DEALS SECTION: Contains information about deals. Items for this section will be treated as CARDS.-->
         <section id="deals" class="bg-dots">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information bordered bg-lightest">
+            <div class="information bordered bg-lightest">
                 <h2>Once in a lifetime opportunity</h2>
                 <h1>Check out our summer deals!</h1>
                 <a href="your_visit.html" class="button-red">Buy your tickets now!</a>
@@ -85,7 +85,7 @@
         <!-- FEATURED SECTION: Contains information about featured rides. Items for this section will be treated as RIDES. -->
         <section id="featured" class="bg-primary">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information">
+            <div class="information">
                 <h1>Out of this world experiences</h1>
                 <h2>Featured rides</h2>
                 <a href="your_visit.html#rides" class="button-blue">All rides</a>
@@ -128,7 +128,7 @@
         <!-- LOCATION SECTION: Contains information about how to reach the park and park hours. Items for this section will be treated as MAP(figure), HOURS(table). -->
         <section id="location" class="bg-green">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information bordered bg-lightest">
+            <div class="information bordered bg-lightest">
                 <h1>Location</h1>
                 <h2>Find us at Las Vegas, Nevada 8101 W Mountains Edge Pkwy</h2>
             </div>
@@ -139,7 +139,7 @@
                     <figcaption>8101 W Mountains Edge Pkwy, Las Vegas, NV 89178, US.</figcaption>
                 </figure>
                 <!-- HOURS: Specifies a heading, a table, table headers, table body, rows, and table data for weekdays, open time and close time. -->
-                <div class="section__information">
+                <div class="information">
                     <h2>Park Hours</h2>
                     <table class="bordered bg-lightest">
                         <tbody>
@@ -175,7 +175,7 @@
         <!-- PARTNER SECTION: Contains information about food and acommodation. Items for this section will be treated as PARTNERS. -->
         <section id="partners" class="bg-blue">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information bordered bg-blue">
+            <div class="information bordered bg-blue">
                 <h1>Want to take your visit to the next level?</h1>
                 <h2>Check out our fantastic partners for food and accommodation!</h2>
             </div>

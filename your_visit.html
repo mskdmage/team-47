@@ -15,14 +15,14 @@
             <a href="index.html" class="navbar__logo"><img src="assets/icons/logo.svg" alt="area 47 logo"></a>
             <p class="navbar__info">Today's hours: <b>09:00 - 23:00</b></p>
             <ul class="navbar__menu-left">
-                <li><a href="your_visit.html#tickets">Get your tickets!</a></li>
-                <li><a href="your_visit.html">Plan your visit!</a></li>
+                <li><a class="button-red" href="your_visit.html#tickets">Get your tickets!</a></li>
+                <li><a class="button-blue" href="your_visit.html#directions">Plan your visit!</a></li>
             </ul>
             <!-- HAMBURGER MENU: Workarround to transform navbar when in mobile. -->
             <input type="checkbox" id="navbar-check" class="navbar__check">
-            <label for="navbar-check" class="navbar__label"><img src="assets/hamburger.svg" alt="Menu" /></label>
+            <label for="navbar-check" class="navbar__label"><img src="assets/icons/hamburger.svg" alt="Menu" /></label>
             <ul class="navbar__menu-right">
-                <li><a href="about_us.html#about">The Park</a></li>
+                <li><a href="your_visit.html#rides">The Park</a></li>
                 <li><a href="your_visit.html#events">Upcoming Events</a></li>
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <!-- TICKETS SECTION: Contains form to buy tickets. Items of this section will be treated as FORMS. -->
         <section id="ticket-form" class="bg-dots">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information">
+            <div class="information">
                 <h1 class="bg-lightest">Get your tickets today!</h1>
             </div>
             <!-- FORM: Specifies a purchase form. Items include two forms, with Label and input. -->
@@ -70,23 +70,22 @@
         <!-- MEMBERSHIP SECTION: Contains information about membership. This section will only contain a CARD -->
         <section id="membership" class="bg-mixed">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information bordered">
+            <div class="information bordered">
                 <h1>Membership Plans 2023</h1>
             </div>
             <div class="container__grid-two-cols">
-                <div class="section__information bordered bg-lightest">
+                <div class="information bordered bg-lightest">
                     <h2>Become a member today</h2>
                     <p>And unlock all the perks to enhance your Area-47 experience.<br><strong>Unlimited access, exclusive discounts,<br> priority queue, and much more!</strong></p>
                     <a class="button-red" href="#">Buy Now!</a>
                 </div>
-                    <p class="card__description"></p>
-                    <img class="bordered" src="images/membership_01.jpg" alt="woman in spacesuit neon color">
+                <img class="bordered" src="images/membership_01.jpg" alt="woman in spacesuit neon color">
             </div>
         </section>
         <!-- RIDES SECTION: Contains information about rides. Items for this section will be treated as RIDES. -->
         <section id="rides" class="bg-green">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information">
+            <div class="information">
                 <h1>Out of this world experiences!</h1>
             </div>
             <div class="container__grid-three-cols">
@@ -109,7 +108,7 @@
                 <!-- RIDE: Specifies an image, a name and a description. -->
                 <div class="card-type-ride bordered bg-lightest">
                     <div class="card__image bg-darkest">
-                        <img src="images/ride_03_invasion.jpg" alt="neon letters for alien invasion">
+                        <img src="images/ride_03_invasion.jpg" alt="neon letters for the word alien invasion on wall">
                     </div>
                     <h2 class="card__title">Alien Invasion Escape Room</h2>
                     <p class="card__description">Gear up, collaborate with your team, and outsmart extraterrestrial invaders in an adrenaline-pumping Alien Invasion.</p>
@@ -122,12 +121,44 @@
                     <h2 class="card__title">VR Adventures</h2>
                     <p class="card__description">Embark on a heart-pounding virtual adventure as you infiltrate the secrets of Area 47.</p>
                 </div>
+                <!-- RIDE: Specifies an image, a name and a description. -->
+                <div class="card-type-ride bordered bg-lightest">
+                    <div class="card__image bg-darkest">
+                        <img src="images/ride_05_abduction.jpg" alt="entrance to rollercoaster in theme park">
+                    </div>
+                    <h2 class="card__title">Alien Rollercoaster</h2>
+                    <p class="card__description">Brace yourself for an extraterrestrial adrenaline rush on the twisting and turning Alien Rollercoaster, where gravity-defying loops and inversions await!</p>
+                </div>
+                <!-- RIDE: Specifies an image, a name and a description. -->
+                <div class="card-type-ride bordered bg-lightest">
+                    <div class="card__image bg-darkest">
+                        <img src="images/ride_06_death_ray.jpg" alt="pink mechanic game in theme park">
+                    </div>
+                    <h2 class="card__title">Death Ray</h2>
+                    <p class="card__description">Step into a realm of intense thrills as you brave the Death Ray, a heart-pounding attraction that catapults you through twists, turns, and electrifying speeds!</p>
+                </div>
+                <!-- RIDE: Specifies an image, a name and a description. -->
+                <div class="card-type-ride bordered bg-lightest">
+                    <div class="card__image bg-darkest">
+                        <img src="images/ride_07_horror_adventure.jpg" alt="four green men on computer terminals">
+                    </div>
+                    <h2 class="card__title">Horror Adventures</h2>
+                    <p class="card__description"> Test your nerves Horror Adventures, where you must unravel sinister mysteries and escape the clutches of darkness before time runs out!</p>
+                </div>
+                <!-- RIDE: Specifies an image, a name and a description. -->
+                <div class="card-type-ride bordered bg-lightest">
+                    <div class="card__image bg-darkest">
+                        <img src="images/ride_08_core.jpg" alt="arcade room with hanging construct from roof">
+                    </div>
+                    <h2 class="card__title">Core Arcade Room</h2>
+                    <p class="card__description">Dive into a world of gaming excitement at the Core Arcade Room.</p>
+                </div>
             </div>
         </section>
         <!-- EVENTS SECTION: Contains information about upcoming events. Items for this section will be treated as EVENTS. -->
         <section id="events" class="bg-blue">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div class="section__information">
+            <div class="information">
                 <h1>Past Events</h1>
             </div>
             <div class="container__flex-col">
@@ -141,9 +172,6 @@
                     <p class="card__description">
                         Families embarked on an unforgettable adventure at our recent Family Exploration Day event.
                         The day was filled with excitement and curiosity as parents and children alike immersed themselves in interactive exhibits, engaged in hands-on activities, and participated in educational workshops.
-                        <br>
-                        From exploring nature trails and discovering hidden wonders to unraveling the mysteries of science, families bonded, learned, and created lasting memories together.
-                        It was a truly extraordinary day of discovery and fun, leaving everyone eagerly anticipating the next edition of this incredible event.
                     </p>
                 </div>
                 <!-- EVENT: Specifies an image, a name and a description. -->
@@ -156,8 +184,6 @@
                     <p class="card__description">
                         The atmosphere was charged with excitement as adventurers gathered for our highly anticipated Midnight Endless Exploration event.
                         As the clock struck midnight, the gates opened to a world of endless possibilities.
-                        <br>
-                        Participants embarked on a thrilling journey, discovering hidden wonders and venturing into uncharted territories under the starry night sky.
                     </p>
                 </div>
 
@@ -165,11 +191,11 @@
         </section>
         <!-- DIRECTIONS SECTION: Contains information about the inner structure of the park. Items for this section will be treated as MAP(figure). -->
         <section id="directions" class="bg-mixed">
-            <div class="section__information bordered bg-lightest">
-                <h2>Park Map</h2>
-                <p>Click on a building to find out</p>
-            </div>
-            <div class="container__flex-col">
+            <div class="container__grid-two-cols">
+                <div class="information bordered bg-lightest">
+                    <h2>Park Map</h2>
+                    <p>Click on the building to find out more!</p>
+                </div>
                 <figure class="bordered">
                     <img src="images/map_01.jpg" alt="map of the park" usemap="#parkmap" width="600" height="315">
                     <map name="parkmap">
