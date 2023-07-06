@@ -9,16 +9,19 @@
 </head>
 <body>
     <!-- HEADER: Contains site navigation and logo -->
-    <header>
+    <header class="header">
         <!-- NAVBAR: contains navigation for the page and company logo. Items for this section will be treated as LOGO, INFO, LEFT MENU, RIGHT MENU. -->
-        <nav>
-            <a href="index.html"><img src="assets/icons/logo.svg" alt="area 47 logo"></a>
-            <p>Today's hours: <b>09:00 - 23:00</b></p>
-            <ul>
+        <nav class="navbar">
+            <a href="index.html" class="navbar__logo"><img src="assets/icons/logo.svg" alt="area 47 logo"></a>
+            <p class="navbar__info">Today's hours: <b>09:00 - 23:00</b></p>
+            <ul class="navbar__menu-left">
                 <li><a href="your_visit.html#tickets">Get your tickets!</a></li>
                 <li><a href="your_visit.html">Plan your visit!</a></li>
             </ul>
-            <ul>
+            <!-- HAMBURGER MENU: Workarround to transform navbar when in mobile. -->
+            <input type="checkbox" id="navbar-check" class="navbar__check">
+            <label for="navbar-check" class="navbar__label"><img src="assets/hamburger.svg" alt="Menu" /></label>
+            <ul class="navbar__menu-right">
                 <li><a href="about_us.html#about">The Park</a></li>
                 <li><a href="your_visit.html#events">Upcoming Events</a></li>
                 <li><a href="about_us.html">About Us</a></li>
@@ -26,145 +29,149 @@
         </nav>
     </header>
     <!-- MAIN: Contains the main content for the document. All sections must specify an #id.  -->
-    <main role="main">
+    <main>
         <!-- HERO SECTION: Contains corporate hero image. -->
-        <section id="hero">
-            <div>
+        <section id="hero" class="bg-mixed">
+            <div class="hero bordered">
                 <img src="images/company_hero.jpg" alt="park attraction of a cannon firing smoke">
             </div>
         </section>
         <!-- ABOUT SECTION: Contains brief description of the park. Items of this section will be treated as ENTRIES.-->
-        <section id="about">
+        <section id="about" class="bg-darkest">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
-                <h1>Area 47</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
-                <p>Whether you're an adrenaline junkie seeking heart-pounding adventures or a curious explorer eager to uncover the secrets of the universe, we have something for everyone. Brace yourself for high-speed alien roller coasters that defy gravity, interactive exhibits that showcase the wonders of outer space, and mind-bending virtual reality experiences that transport you to distant galaxies.</p>
+            <div class="container__grid-two-cols bg-primary">
+                <div class="section__information">
+                    <h1>Area 47</h1>
+                    <h2>About Us</h2>
+                </div>
+                <div class="section__information bordered bg-lightest">
+                    <p>
+                        Whether you're an adrenaline junkie seeking heart-pounding adventures or a curious explorer eager to uncover the secrets of the universe, we have something for everyone.
+                        Brace yourself for high-speed alien roller coasters that defy gravity, interactive exhibits that showcase the wonders of outer space, and mind-bending virtual reality experiences that transport you to distant galaxies.
+                    </p>
+                </div>
             </div>
         </section>
         <!-- HISTORY SECTION: Contains text information on the park background. Items of this section will be treated as ENTRIES. -->
-        <section id="history">
+        <section id="history" class="bg-darkest">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
-                <h1>Park History</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
-                <p>As the world's foremost alien-themed park, we proudly opened our gates in 2023, marking a new era in immersive entertainment. Our mission is to provide unparalleled experiences that transport our visitors beyond the realms of ordinary amusement parks, where laughter, thrills, and unforgettable memories await at every turn.</p>
-            </div>
+            <div class="container__grid-two-cols bg-primary">
+                <div class="section__information bordered bg-lightest">
+                    <p>As the world's foremost alien-themed park, we proudly opened our gates in 2023, marking a new era in immersive entertainment. Our mission is to provide unparalleled experiences that transport our visitors beyond the realms of ordinary amusement parks, where laughter, thrills, and unforgettable memories await at every turn.</p>
+                </div>
+                <div class="section__information">
+                    <h1>Park History</h1>
+                </div>
+            </div> 
         </section>
         <!-- VALUES SECTION: Contains the parks values. Will contain a single ENTRY -->
-        <section id="values">
-            <div>
+        <section id="values" class="bg-green">
+            <div class="section__information">
                 <h1>Our values</h1>
             </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
-                <h2>Innovation:</h2>
-                <p>We push boundaries and embrace new ideas.</p>
-                <h2>Excellence:</h2>
-                <p>We deliver exceptional experiences, every time.</p>
-                <h2>Imagination:</h2>
-                <p>We inspire wonder and celebrate creativity.</p>
+            <div class="container__flex-row bordered">
+                <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
+                <div class="section__information">
+                    <h2>Innovation:</h2>
+                    <p>We push boundaries and embrace new ideas.</p>
+                </div>
+                <div class="section__information">
+                    <h2>Excellence:</h2>
+                    <p>We deliver exceptional experiences, every time.</p>
+                </div>
+                <div class="section__information">
+                    <h2>Imagination:</h2>
+                    <p>We inspire wonder and celebrate creativity.</p>
+                </div>
             </div>
         </section>
         <!-- PRIVACY SECTION: Contains text information the park's stance on privacy. Items of this section will be treated as ENTRIES. -->
-        <section id="privacy">
+        <section id="privacy" class="bg-blue">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
+            <div class="section__information">
                 <h1>Privacy Policy</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
                 <p>Your privacy is important to us. We adhere to strict policies to ensure your personal information is safe and secure.</p>
             </div>
         </section>
         <!-- COPYRIGHT SECTION: Contains text information about the park's stance on copyright. Items of this section will be treated as ENTRIES. -->
-        <section id="copyright">
+        <section id="copyright" class="bg-blue">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
+            <div class="section__information">
                 <h1>Copyright Information</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
                 <p>All content on this website is copyright of Magic Park. No part of this website may be reproduced without our written permission.</p>
             </div>
         </section>
         <!-- CAREERS SECTION: Contains text information the park's current job openings. -->
-        <section id="careers">
+        <section id="careers" class="bg-dots">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
+            <div class="section__information bordered bg-lightest">
                 <h1>Work with us</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
+                <p>We have no open positions currently.</p>
                 <p>Subscribe to our newsletters to be the first to know about job openings.</p>
+                <a class="button-red" href="#">Subscribe</a>
             </div>
         </section>
         <!-- CONTACT US: Contains text information on how to contact the park's support team. Items of this section will be treated as ENTRIES and FORM. -->
         <section id="contact">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
-            <div>
+            <div class="section__information">
                 <h1>Contact Us</h1>
-            </div>
-            <!-- ENTRY: Specifies one or more blocks of text, optionally an image. -->
-            <div>
                 <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out to us. Contact us here.</p>
-                <p>Send us a mail: support@area47.com | Call us: (800) 47-PARK (800-692-7753)</p>
+                <p>Send us a mail: <strong>support@area47.com</strong> or Call us: <strong>(800) 47-PARK (800-692-7753)</strong></p>
             </div>
             <!-- FORM: Specifies a contact form. Items include a single form, with Label and input. -->
-            <div>
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" value="Your name">
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="example@example.com">
-                    <br>
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" value="Subject">
-                    <br>
-                    <label for="message"></label>
-                    <input type="text" id="message" name="message" value="Type your message here.">
-                    <br>
-                    <input type="submit" value="Submit">
+            <div class="container__flex-row">
+                <form class="contact-form">
+                    <div class="contact-form__info">
+                        <label>Name:</label>
+                        <input class="bordered" type="text" id="name" name="name" placeholder="Your name">
+                        <label>Email:</label>
+                        <input class="bordered" type="email" id="email" name="email" placeholder="example@example.com">
+                        <label>Subject:</label>
+                        <input class="bordered" type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="contact-form__message">
+                        <label for="message"></label>
+                        <input class="bordered" type="text" id="message" name="message" placeholder="Type your message here.">
+                    </div>
+                    <input class="button-red" type="submit" value="Submit">
                   </form>
             </div>
         </section>
     </main>
-    <!-- FOOTER: Contains support links. Links will be arranged inside a MENU -->
-    <footer>
-        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
-        <div>
-            <h1>Plans</h1>
-            <ul>
-                <li><a href="your_visit.html#tickets">Tickets</a></li>
-                <li><a href="your_visit.html#membership">Memberships</a></li>
-            </ul>
+    <!-- FOOTER: Contains support links. Links will be arranged inside a MENU. -->
+    <footer class="footer">
+        <div class="footer__content">
+            <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+            <div class="footer__menu">
+                <h1>Plans</h1>
+                <ul>
+                    <li><a href="your_visit.html#tickets">Tickets</a></li>
+                    <li><a href="your_visit.html#membership">Memberships</a></li>
+                </ul>
+            </div>
+            <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+            <div class="footer__menu">
+                <h1>Support</h1>
+                <ul>
+                    <li><a href="about_us.html#copyright">Copyright information</a></li>
+                    <li><a href="about_us.html#privacy">Privacy Policy</a></li>
+                    <li><a href="about_us.html#contact">Help</a></li>
+                </ul>
+            </div>
+            <!-- MENU: Specifies a heading and an unordered list containing links.  -->
+            <div class="footer__menu">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="about_us.html#history">About Us</a></li>
+                    <li><a href="about_us.html#careers">Careers</a></li>
+                    <li><a href="about_us.html#contact">Contact us</a></li>
+                </ul>
+            </div>
+            <!-- CREDITS: Information about the authors of the website. -->
         </div>
-        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
-        <div>
-            <h1>Support</h1>
-            <ul>
-                <li><a href="about_us.html#copyright">Copyright information</a></li>
-                <li><a href="about_us.html#privacy">Privacy Policy</a></li>
-                <li><a href="about_us.html#contact">Help</a></li>
-            </ul>
-        </div>
-        <!-- MENU: Specifies a heading and an unordered list containing links.  -->
-        <div>
-            <h1>Company</h1>
-            <ul>
-                <li><a href="about_us.html#history">About Us</a></li>
-                <li><a href="about_us.html#careers">Careers</a></li>
-                <li><a href="about_us.html#contact">Contact us</a></li>
-            </ul>
-        </div>
-        <!-- CREDITS: Information about the authors of the website. -->
-        <div>
-            <p>Created by Team 47 - WebDev April 2023 @UoL. All credits to Francois Sergenton, Danniels Villarroel, Lucas Pedrosa and Alberto Briceno.</p>
+        <div class="footer__credits">
+            Created by Team 47 - WebDev April 2023 @UoL. All credits to Francois Sergenton, Danniels Villarroel, Lucas Pedrosa and Alberto Briceno.
         </div>
     </footer>
 </body>
