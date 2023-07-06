@@ -464,8 +464,9 @@ div[class*="type-ticket"] .card__image img {
 
 div[class*="type-ride"] {
     width: fit-content;
+    min-height: 25rem;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
         "card-image"

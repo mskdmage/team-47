@@ -31,7 +31,7 @@
     <!-- MAIN: Contains the main content for the document. All sections must specify an #id.  -->
     <main>
         <!-- TICKETS SECTION: Contains form to buy tickets. Items of this section will be treated as FORMS. -->
-        <section id="ticket-form" class="bg-dots">
+        <section id="tickets" class="bg-dots">
             <!-- SECTION INFORMATION: Contains text information relevant to the section. May specify h1, h2, h3..., p, as well as links. -->
             <div class="information">
                 <h1 class="bg-lightest">Get your tickets today!</h1>
@@ -47,6 +47,10 @@
                         <div>
                             <label for="premium">Premium</label>
                             <input type="radio" id="premium" name="type" value="premium">
+                        </div>
+                        <div>
+                            <label for="membership">Membership</label>
+                            <input type="radio" id="membership" name="type" value="membership">
                         </div>
                     </div>
                     <div class="ticket-form__number">
