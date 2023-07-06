@@ -254,7 +254,7 @@ main {
 
 section {
     min-height: 10rem;
-    padding: 1rem 0;
+    padding: 4rem 0;
     display: flex;
     flex-direction: column;
     text-justify: center;
@@ -465,7 +465,7 @@ div[class*="type-ticket"] .card__image img {
 div[class*="type-ride"] {
     width: fit-content;
     display: grid;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
         "card-image"
