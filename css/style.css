@@ -19,8 +19,8 @@
     /* Font Variables */
     --ui-font: 'Chivo', sans-serif;
     --content-font: 'FamiljenGrotesk', sans-serif;
-    --size-h1: 1.2rem;
-    --size-h2: 1.1rem;
+    --size-h1: 1.8rem;
+    --size-h2: 1.5rem;
     --size-h3: 1.0rem;
     --size-h4: 0.9rem;
     --size-p1: 1.0rem;
@@ -528,7 +528,7 @@ div[class*="type-event"] * {
     border-radius: 2rem;
     justify-content: space-around;
     align-content: center;
-    width: 25rem;
+    width: 30rem;
 }
 
 form label {
@@ -764,6 +764,10 @@ strong {
 
     div[class*="type-partner"] {
         grid-template-rows: auto;
+    }
+
+    .ticket-form {
+        width: 20rem;
     }
 }
 
